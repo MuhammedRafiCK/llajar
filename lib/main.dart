@@ -1,16 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:llajar/src/view/responiveLayout/layoutBuilder.dart';
+import 'package:llajar/home_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const CarRentalsApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class CarRentalsApp extends StatelessWidget {
+  const CarRentalsApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Flutter Demo', home: ResponsiveLayout());
+    return MaterialApp(
+      title: 'Car Rentals',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        primaryColor: const Color(0xFF2c4c62),
+        fontFamily: 'Roboto',
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      home: const HomeScreen(),
+      debugShowCheckedModeBanner: false,
+    );
   }
 }
